@@ -1,0 +1,6 @@
+#!/home/adedu/ml_process/air_quality/.venv_aq/bin/python3
+import sys
+from jupyter_client.kernelspecapp import KernelSpecApp
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(KernelSpecApp.launch_instance())
