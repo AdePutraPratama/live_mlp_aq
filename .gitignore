@@ -1,4 +1,5 @@
 data/
+venv_aq/
 .venv_aq/
 **/.ipynb_checkpoints/
 logs/
