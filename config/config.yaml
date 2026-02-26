@@ -2,7 +2,7 @@ columns_object: &id001
 - stasiun
 - critical
 - category
-datetime_columns:
+columns_datetime:
 - tanggal
 features:
 - stasiun
@@ -22,7 +22,7 @@ impute_pm25:
   BAIK: 40.263636363636365
   TIDAK BAIK: 82.80899763220205
 impute_so2: 35.344777209642075
-int32_columns:
+columns_int:
 - pm10
 - pm25
 - so2
@@ -39,9 +39,28 @@ label_categories_new:
 - BAIK
 - TIDAK BAIK
 object_columns: *id001
+path_training_log: "logs/training_log.csv"
+path_model: "models/model.pkl"
+path_best_model: "models/best_model.pkl"
+path_evaluation: "logs/evaluation.txt"
 path_joined_data: ../data/interim/joined_dataset.pkl
 path_ohe_stasiun: ../models/ohe_stasiun.pkl
-path_production_model: ../models/best_model.pkl
+path_data_raw: "data/raw/"
+path_data_joined: "data/interim/data_joined.pkl"
+path_data_validated: "data/processed/data_validated.pkl"
+
+path_data_train:
+  - "data/processed/X_train.pkl"
+  - "data/processed/y_train.pkl"
+
+path_data_valid:
+  - "data/processed/X_valid.pkl"
+  - "data/processed/y_valid.pkl"
+
+path_data_test:
+  - "data/processed/X_test.pkl"
+  - "data/processed/y_test.pkl"
+path_production_model: "models/best_model.pkl"
 path_raw_data: ../data/raw/
 path_test_set:
 - ../data/interim/X_test.pkl
@@ -53,6 +72,20 @@ path_valid_set:
 - ../data/interim/X_valid.pkl
 - ../data/interim/y_valid.pkl
 path_validated_data: ../data/interim/validated_data.pkl
+path_fitted_encoder_stasiun: "models/encoder_stasiun.pkl"
+path_fitted_scaler: "models/scaler.pkl"
+path_fitted_encoder_label: "models/encoder_label.pkl"
+path_clean_train:
+  - "data/processed/X_train_clean.pkl"
+  - "data/processed/y_train_clean.pkl"
+
+path_clean_valid:
+  - "data/processed/X_valid_clean.pkl"
+  - "data/processed/y_valid_clean.pkl"
+
+path_clean_test:
+  - "data/processed/X_test_clean.pkl"
+  - "data/processed/y_test_clean.pkl"
 range_co:
 - -1
 - 47

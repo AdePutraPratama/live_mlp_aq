@@ -1,4 +1,6 @@
 data/
 .venv_aq/
 **/.ipynb_checkpoints/
-logs/	
+logs/
+__pycache__/
+*.pyc	
